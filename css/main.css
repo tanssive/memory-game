@@ -1,0 +1,65 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  background: #2e2d2d;
+}
+
+body main {
+  height: 100vh;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (120px)[4];
+      grid-template-columns: repeat(4, 120px);
+  -ms-grid-rows: (120px)[3];
+      grid-template-rows: repeat(3, 120px);
+  grid-gap: 20px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+body main .card {
+  background-color: #0f6e6e;
+  width: 120px;
+  height: 120px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-shadow: 1px 1px 0 rgba(0, 0, 0, 0.3);
+          box-shadow: 1px 1px 0 rgba(0, 0, 0, 0.3);
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+body main .card:hover {
+  cursor: pointer;
+}
+
+body main .card:active {
+  -webkit-transform: scale(0.97);
+          transform: scale(0.97);
+  -webkit-transition: -webkit-transform .2s;
+  transition: -webkit-transform .2s;
+  transition: transform .2s;
+  transition: transform .2s, -webkit-transform .2s;
+}
+
+body main img {
+  width: 80px;
+  height: 80px;
+  display: none;
+}
+/*# sourceMappingURL=main.css.map */
