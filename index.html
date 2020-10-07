@@ -6,22 +6,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Memory Game</title>
     <link rel="stylesheet" href="./css/main.css">
+    <script src="https://kit.fontawesome.com/a8ac12b86f.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@700&family=Quicksand:wght@600&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="./icons/brain-solid.svg" type="image/x-icon">
+
 </head>
 
 <body>
-    <main>
-        <div class="card"><img src="./icons/apple-alt-solid.svg" alt="" id="apple"></div>
-        <div class="card"><img src="./icons/drumstick-bite-solid.svg" alt="" id="drumstick"></div>
-        <div class="card"><img src="./icons/campground-solid.svg" alt="" id="campground"></div>
-        <div class="card"><img src="./icons/football-ball-solid.svg" alt="" id="ball"></div>
-        <div class="card"><img src="./icons/mountain-solid.svg" alt="" id="mountain"></div>
-        <div class="card"><img src="./icons/apple-alt-solid.svg" alt="" id="apple"></div>
-        <div class="card"><img src="./icons/tree-solid.svg" alt="" id="tree"></div>
-        <div class="card"><img src="./icons/campground-solid.svg" alt="" id="campground"></div>
-        <div class="card"><img src="./icons/drumstick-bite-solid.svg" alt="" id="drumstick"></div>
-        <div class="card"><img src="./icons/mountain-solid.svg" alt="" id="mountain"></div>
-        <div class="card"><img src="./icons/football-ball-solid.svg" alt="" id="ball"></div>
-        <div class="card"><img src="./icons/tree-solid.svg" alt="" id="tree"></div>
+    <main id="game-board">
+        <section id="startup-screen">
+            <p>Memory Game</p>
+            <select id="columns" required>
+            <option value=""></option>
+            <option value="2">2</option>
+            <option value="4">4</option>
+            <option value="6">6</option>
+            <option value="8">8</option>
+        </select>
+            <select id="rows" required>
+            <option value=""></option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+        </select>
+
+            <button id="start-game">Start Game</button>
+        </section>
     </main>
 
     <script src="./scripts/game.js" type="module"></script>
