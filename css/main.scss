@@ -1,40 +1,100 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    background: rgb(46, 45, 45);
-    main {
-        height: 100vh;
-        display: grid;
-        grid-template-columns: repeat(4, 120px);
-        grid-template-rows: repeat(3, 120px);
-        grid-gap: 20px;
-        justify-content: center;
-        align-content: center;
-        .card {
-            background-color: rgb(15, 110, 110);
-            width: 120px;
-            height: 120px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            box-shadow: 1px 1px 0 rgba(0, 0, 0, .3);
-            transform: scale(1);
-        }
-        .card:hover {
-            cursor: pointer;
-        }
-        .card:active {
-            transform: scale(0.97);
-            transition: transform .2s;
-        }
-        img {
-            width: 80px;
-            height: 80px;
-            display: none;
-        }
-    }
-}
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+            
+            body {
+                background: rgb(46, 45, 45);
+                font-family: 'Quicksand', sans-serif;
+                main {
+                    height: 100vh;
+                    display: grid;
+                    justify-content: center;
+                    align-content: center;
+                    grid-gap: 20px;
+                    .card {
+                        background-color: rgb(8, 232, 183);
+                        width: 120px;
+                        height: 70px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        box-shadow: 1px 1px 0 rgba(0, 0, 0, .3);
+                        transform: scale(1);
+                        border-radius: 5px;
+                    }
+                    .card:hover {
+                        cursor: pointer;
+                    }
+                    .card:active {
+                        transform: scale(0.97);
+                        transition: transform .2s;
+                    }
+                    // img {
+                    //     width: 80px;
+                    //     height: 80px;
+                    //     display: none;
+                    // }
+                    #startup-screen {
+                        height: 100vh;
+                        width: 100vw;
+                        display: grid;
+                        justify-content: center;
+                        align-content: center;
+                        // flex-wrap: wrap;
+                        opacity: 1;
+                        -webkit-transition: opacity 0.5s ease-in-out;
+                        -moz-transition: opacity 0.5s ease-in-out;
+                        -ms-transition: opacity 0.5s ease-in-out;
+                        -o-transition: opacity 0.5s ease-in-out;
+                        transition: opacity 0.5 ease-in-out;
+                        p {
+                            font-size: 40px;
+                            background: -webkit-linear-gradient(#eee, #333);
+                            -webkit-background-clip: text;
+                            background-clip: text;
+                            -webkit-text-fill-color: transparent;
+                        }
+                        select {
+                            width: 300px;
+                            height: 30px;
+                            margin: 10px 0 10px 0;
+                            border-radius: 5px;
+                            option {
+                                font-family: 'Quicksand', sans-serif;
+                            }
+                        }
+                        button {
+                            background-image: linear-gradient(to right, #16222A 0%, #3A6073 51%, #16222A 100%);
+                            margin: 10px;
+                            padding: 15px 45px;
+                            text-align: center;
+                            text-transform: uppercase;
+                            transition: 0.5s;
+                            background-size: 200% auto;
+                            color: white;
+                            box-shadow: 0 0 20px rgb(20, 41, 80);
+                            border-radius: 10px;
+                            // display: block;
+                            font-family: 'Quicksand', sans-serif;
+                            font-size: 30px;
+                        }
+                        button:hover {
+                            background-position: right center;
+                            /* change the direction of the change here */
+                            color: rgb(167, 81, 81);
+                            box-shadow: 0 0 20px rgb(129, 145, 175);
+                            text-decoration: none;
+                            cursor: pointer;
+                        }
+                        button:active {
+                            transform: scale(0.97);
+                            transition: transform .2s;
+                        }
+                    }
+                    #startup-screen.fade {
+                        opacity: 0;
+                    }
+                }
+            }
