@@ -7,28 +7,25 @@
 
 body {
   background: #2e2d2d;
+  font-family: 'Quicksand', sans-serif;
 }
 
 body main {
   height: 100vh;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (120px)[4];
-      grid-template-columns: repeat(4, 120px);
-  -ms-grid-rows: (120px)[3];
-      grid-template-rows: repeat(3, 120px);
-  grid-gap: 20px;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   -ms-flex-line-pack: center;
       align-content: center;
+  grid-gap: 20px;
 }
 
 body main .card {
-  background-color: #0f6e6e;
+  background-color: #08e8b7;
   width: 120px;
-  height: 120px;
+  height: 70px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -42,6 +39,7 @@ body main .card {
           box-shadow: 1px 1px 0 rgba(0, 0, 0, 0.3);
   -webkit-transform: scale(1);
           transform: scale(1);
+  border-radius: 5px;
 }
 
 body main .card:hover {
@@ -57,9 +55,79 @@ body main .card:active {
   transition: transform .2s, -webkit-transform .2s;
 }
 
-body main img {
-  width: 80px;
-  height: 80px;
-  display: none;
+body main #startup-screen {
+  height: 100vh;
+  width: 100vw;
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  opacity: 1;
+  -webkit-transition: opacity 0.5s ease-in-out;
+  -webkit-transition: opacity 0.5 ease-in-out;
+  transition: opacity 0.5 ease-in-out;
+}
+
+body main #startup-screen p {
+  font-size: 40px;
+  background: -webkit-linear-gradient(#eee, #333);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+body main #startup-screen select {
+  width: 300px;
+  height: 30px;
+  margin: 10px 0 10px 0;
+  border-radius: 5px;
+}
+
+body main #startup-screen select option {
+  font-family: 'Quicksand', sans-serif;
+}
+
+body main #startup-screen button {
+  background-image: -webkit-gradient(linear, left top, right top, from(#16222A), color-stop(51%, #3A6073), to(#16222A));
+  background-image: linear-gradient(to right, #16222A 0%, #3A6073 51%, #16222A 100%);
+  margin: 10px;
+  padding: 15px 45px;
+  text-align: center;
+  text-transform: uppercase;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;
+  -webkit-box-shadow: 0 0 20px #142950;
+          box-shadow: 0 0 20px #142950;
+  border-radius: 10px;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 30px;
+}
+
+body main #startup-screen button:hover {
+  background-position: right center;
+  /* change the direction of the change here */
+  color: #a75151;
+  -webkit-box-shadow: 0 0 20px #8191af;
+          box-shadow: 0 0 20px #8191af;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+body main #startup-screen button:active {
+  -webkit-transform: scale(0.97);
+          transform: scale(0.97);
+  -webkit-transition: -webkit-transform .2s;
+  transition: -webkit-transform .2s;
+  transition: transform .2s;
+  transition: transform .2s, -webkit-transform .2s;
+}
+
+body main #startup-screen.fade {
+  opacity: 0;
 }
 /*# sourceMappingURL=main.css.map */
